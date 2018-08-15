@@ -1,0 +1,57 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Bellatrix {
+
+	@SuppressWarnings("resource")
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc = new Scanner(System.in);
+		boolean Task = true;
+		 int K = sc.nextInt();
+		 System.out.println(K);
+		 String Checker1 = Integer.toString(K);
+		 
+		 int t = Integer.parseInt(Checker1.substring(Checker1.length(),Checker1.length()+1));
+		 System.out.println(t);
+		 if(t == 5){
+			 System.out.println("INSOMANIA");
+			 System.exit(0);
+		 }
+		 ArrayList<Integer> checklist = new ArrayList<Integer>();
+		 ArrayList<Integer> addlist = new ArrayList<Integer>(); 
+		 for(int i=0;i<10;i++){
+			checklist.add(i);
+			}
+			System.out.println(checklist);
+			System.out.println(addlist);
+		
+		while(!(addlist.size() == 10)){
+			
+				
+				for(int i=1;addlist.size() <= 10 && i > 0 && Task;i=i+1){
+					System.out.println("i" + i);
+					int N = i* K;
+					System.out.println("Nspec:" + N);
+					String Checker = Integer.toString(N);
+					System.out.println(Checker);
+					//System.out.println(N);
+					for(int j = 0 ; j <= Checker.length()-1 && addlist.size() <= 10 ;j++){
+					int t = Integer.parseInt(Checker.substring(j,j+1));
+					
+					//System.out.println("t   " + t + " j " + Checker.substring(j,j+1) + " " + j);
+					if(!addlist.contains(t) && addlist.size() !=10){
+						addlist.add(t);
+						System.out.println(addlist + " " + addlist.size());
+					}
+					if(addlist.size() ==10){
+						Task = false;
+					}
+					}
+				}
+				
+	}
+
+}
+}

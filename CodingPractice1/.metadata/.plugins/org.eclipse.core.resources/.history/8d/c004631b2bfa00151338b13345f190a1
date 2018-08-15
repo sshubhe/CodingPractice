@@ -1,0 +1,53 @@
+package HeapProblems;
+
+import java.util.ArrayList;
+
+public class MaxHeap {
+
+	public static void main(String[] args) {
+		//In max heap the higher elements in hierarchy have higher values
+		
+		int[] input = new int[10];
+		int[] test = {1,2,3,4,5,6,7};
+		ArrayList<String> TestStringArray = new ArrayList<String>();
+		boolean[]  check = new boolean[10];
+		
+		for(int j = 0; j < check.length;j++){
+			check[j] = true;
+			if(j%2 !=0){
+				check[j] = false;
+				
+			}
+			
+			System.out.println("Display check : " + check[j]);
+		}
+		
+		for(int i = 0;i<input.length;i++){
+			input[i] = i++;
+			System.out.println("input :" + input[i]);
+		}
+
+		//creating heap :
+		node root = new node();
+
+	}
+
+}
+
+class node{
+	int data;
+	node left;
+	node right;
+	
+	public node(){
+		this.data = 0;
+		this.left = null;
+		this.right = null;
+	}
+	
+	public node(node left, node right, int data){
+		this.right = right;
+		this.left = left;
+		this.data = data;
+	}
+}

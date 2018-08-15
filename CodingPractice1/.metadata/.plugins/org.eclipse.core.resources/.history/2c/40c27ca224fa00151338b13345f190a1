@@ -1,0 +1,35 @@
+package HeapProblems;
+
+public class MaxHeap {
+
+	public static void main(String[] args) {
+		//In max heap the higher elements in hierarchy have higher values
+		
+		int[] input = new int[10];
+		int[] test = {1,2,3,4,5,6,7};
+		
+		for(int i = 0;i<input.length;i++){
+			input[i] = i++;
+			System.out.println("input :" + input[i]);
+		}
+		
+		
+		
+		
+
+		
+	}
+
+}
+
+class node{
+	int data;
+	node left;
+	node right;
+	
+	public node(node left, node right, int data){
+		this.right = right;
+		this.left = left;
+		this.data = data;
+	}
+}

@@ -1,0 +1,11 @@
+
+public class LinkListImpl {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int [] input = new int[10];
+		input = {12,1,312,12312,33,12,123,1,22,33,21};
+	}
+
+}

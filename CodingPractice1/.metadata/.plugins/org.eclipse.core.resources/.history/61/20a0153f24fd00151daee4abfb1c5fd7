@@ -1,0 +1,12 @@
+package HeapProblems;
+
+public class HeapMax {
+ 
+	int insertdata;
+	int [] Heap;
+	
+	public HeapMax(int inserdata){
+		this.insertdata = insertdata;
+		this.Heap = 
+	}
+}

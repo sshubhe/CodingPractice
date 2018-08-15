@@ -1,0 +1,38 @@
+package com.merge.sort;
+
+import java.util.LinkedList;
+
+public class MergeSorting {
+
+	int [] Input = { 1,
+			2,
+			4,
+			523,
+			232,
+			11,
+			31,
+			1122,
+			12
+	};
+	
+	String S2;
+	
+	
+	String S1 = "This is a split patter and reverse";
+	
+	LinkedList<String> BrokenWords = new LinkedList<String>();
+	 Delimiter.(S1, "");
+	
+	public static void main(String []args){
+		
+	}
+	
+	public void MergeSort(int []A , int p , int q){
+		
+		
+	}
+	
+	
+	
+	
+}

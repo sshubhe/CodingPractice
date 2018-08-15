@@ -1,0 +1,16 @@
+
+public class LinkList {
+
+	public static void main(String[] args) {
+	
+			LinkListImpl l = new LinkListImpl();
+			l.insert(5);
+			l.insert(123);
+			l.insert(21);
+			l.display(n);
+		}
+	
+	
+	}
+
+

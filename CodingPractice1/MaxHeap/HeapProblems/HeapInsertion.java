@@ -1,0 +1,52 @@
+package HeapProblems;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class HeapInsertion {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[] input = {12,32,1,122,13};
+		HeapCreation HeapTest = new HeapCreation();
+		HeapTest.insert(12);
+		HeapTest.insert(23);
+		for(int i = 0; i < HeapTest.HeapCheck.length;i++){
+		System.out.println(HeapTest.HeapCheck[i]);
+		}
+	}
+}
+	class HeapCreation{
+		int insertdata;
+		List<Integer> HeapCheck = new LinkedList<Integer>();
+		public HeapCreation(){
+			this.insertdata = 0;
+		
+		}
+		public HeapCreation(int insertdata){
+			this.insertdata = insertdata;
+			this.HeapCheck = null;
+		}
+		public int[] insert (int insertdata){
+			
+			if(HeapCheck.size() == 0){
+				int newlength = HeapCheck.size() +1;
+				HeapCheck.add(insertdata);
+			}
+			else{
+				HeapCheck = new int[HeapCheck.length+1];
+				HeapCheck[HeapCheck.length-1] = insertdata;
+				int parent = (int) (HeapCheck.length-1)/2;
+					parent = (int) (i-1)/2;
+					if(insertdata <= HeapCheck[parent]){
+						int temp = HeapCheck[parent];
+						HeapCheck[parent] = insertdata;
+					}
+				}
+				
+			}
+			return HeapCheck;
+		}
+	}
+

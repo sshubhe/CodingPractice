@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+
+public class ReverseWordinString {
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String input = "This is a test string";
+		String Delimit = "[ ]+";
+		String [] TestResult = input.split(Delimit);
+		ArrayList<String> Check = new ArrayList<String>();
+		System.out.println(reverseprint(TestResult));
+		
+	}
+	
+	public static String reverseprint(String []Result ){
+		
+		String ResultReverse = Result[Result.length-1];
+		for(int i = Result.length -2 ; i >=0;i++){
+			
+			ResultReverse = ResultReverse + (Result[i]);
+		
+			
+		}
+		
+		return ResultReverse;
+		
+	}
+
+}

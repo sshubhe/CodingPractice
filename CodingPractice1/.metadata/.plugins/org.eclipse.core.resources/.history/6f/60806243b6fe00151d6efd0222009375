@@ -1,0 +1,137 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class test {
+
+	public static void main(String[] args) {
+		try{
+			Scanner in = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
+			//Scanner in = new Scanner(file);		
+			int t = in.nextInt();  
+			//System.out.println("output :" + t);
+		    for (int test = 1; test <= t; test++) {
+			int n = in.nextInt();
+			int m = in.nextInt();
+			System.out.println("n" + n + "m" + m);
+			System.out.println("Case #" + test);
+		
+		int size = n;
+		int counter =1;
+		String Str;
+		int []Add = new int[size];
+		List<ArrayList<Integer>> FinalTest = new ArrayList<ArrayList<Integer>>();
+	    int numRows = (int)Math.pow(2, size);
+	    Integer[][] bools = new Integer[numRows][size];
+	    System.out.println("test : " + bools.length);
+	    for(int i = 0;i<bools.length;i++)
+	    {
+	        for(int j = 0; j < bools[i].length; j++)
+	        {
+	            int val = bools.length * j + i;
+	            int ret = (1 & (val >>> j));
+	            //System.out.println( ret != 0);
+	            if( (ret != 0) == true)
+	            {
+	            	bools[i][j] = 1;}
+	            else{
+	            	bools[i][j] = 0;}
+	            //System.out.print(bools[i][j] + "\t");
+	        }
+	        //System.out.println();
+	    }
+	    for(int i = 0;i<bools.length;i++)
+	    {
+	    	ArrayList<Integer>S1 = new ArrayList<Integer>() ;
+	        for(int j = 0; j < bools[i].length; j++)
+	        { 
+	        	if((bools[i][0]) == 1 && bools[i][size-1] == 1){
+	        		//System.out.print(bools[i][j] + " ");
+	        		if(j==size-1){
+	        			//System.out.println();
+	        			for(int p = 0 ; p <= size-1;p++){
+	        				S1.add(bools[i][p]);
+	        			}
+	        			FinalTest.add(S1);
+	        			
+	        		}
+	        		}
+	        	}
+	        	
+	
+	     // System.out.println(FinalTest);
+	    }
+	    int pointer = 0;
+	    
+	    for(int i = 0; i < FinalTest.size() && counter <= m;i++){
+	    	ArrayList<Integer> output = new ArrayList<Integer>();  	
+	    	//System.out.println(FinalTest.get(i));
+	    
+	    	for(int j = 2 ; j <= 10 ; j++){
+	    		int sum =0;
+	    		boolean prime = true;
+	    		for(int k =0; k <= size-1;k++ ){
+	    			int product = (int)Math.pow(j, k);
+	    			//System.out.println("FinalTest.get(i).get(k)" + FinalTest.get(i).get(k) + " product " + product);
+	    			sum = sum + FinalTest.get(i).get(k)*product;
+	    		}
+	    		//System.out.println(FinalTest.get(i) + "sum" + sum);
+	    		    //check if n is a multiple of 2
+	    		
+	    		    /*if (sum%2==0) {
+	    		    	prime = false;
+	    		    	//System.out.println( sum + "not prime" + sum/2);
+	    		    	output.add(2);
+	    		    }*/
+	    		    //else {
+	    		    for(int y=2;y*y<=sum;y++) {
+	    		        if(sum%y==0){
+	    		        	//System.out.println("not prime");
+	    		        	prime = false;
+	    		        	//System.out.println( sum + "not prime" + sum/y);
+	    		        	output.add(y);
+	    		        	break;
+	    		    }    
+	    		}
+	    		    //} 		    
+	    		    
+	    		    if(prime == true){
+	    		    	//System.out.println(prime + "prime");
+	    		    	break;
+	    		    }
+	    		    
+	    		    //output.add(sum);
+	    		    
+	    	}
+	    	if(output.size() == 9 && counter <= m){
+	    		
+	    	System.out.println(FinalTest.get(i) + "sum" + output + "counter " + counter);
+	    	counter++;
+	    	for(int out = 0;out <FinalTest.get(i).size();out++ ){
+	    		System.out.print(FinalTest.get(i).get(out));
+	    	}
+	    	}
+	    }
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	 
+	}
+    }catch(Exception e){
+		System.out.println(e);
+	}
+		}
+	}
+

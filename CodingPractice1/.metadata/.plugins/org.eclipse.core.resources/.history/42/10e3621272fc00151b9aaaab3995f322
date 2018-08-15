@@ -1,0 +1,21 @@
+
+public class BinaryTree {
+
+	node root;
+	
+	public BinaryTree(){
+		root = null;
+	}
+	
+	public void insert(int nodeval){
+		
+		if(root == null){
+			root.val = nodeval;
+		}
+		else{
+			node n = new node(nodeval);
+			
+		}
+	
+	}
+	}

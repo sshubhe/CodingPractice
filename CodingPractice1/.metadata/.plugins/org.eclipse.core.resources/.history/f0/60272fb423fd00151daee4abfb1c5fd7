@@ -1,0 +1,47 @@
+package HeapProblems;
+
+public class HeapInsertion {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[] input = {12,32,1,122,13};
+		
+	}
+	
+	class HeapCreation{
+		int insertdata;
+		int [] HeapCheck;
+		
+		public HeapCreation(){
+			this.insertdata = 0;
+			this.HeapCheck = null;
+		}
+		public HeapCreation(int insertdata){
+			this.insertdata = insertdata;
+			this.HeapCheck = null;
+		}
+		public int[] insert (int insertdata){
+			
+			if(HeapCheck.length == 0){
+				HeapCheck = new int[HeapCheck.length+1];
+				HeapCheck[0] = insertdata;
+			}
+			else{
+				HeapCheck = new int[HeapCheck.length+1];
+				HeapCheck[HeapCheck.length] = insertdata;
+				int parent = (int) (HeapCheck.length-1)/2;
+				for(int i = parent;i >=0;i = (int) i/2){
+					if(insertdata <= HeapCheck[parent]){
+						int temp = HeapCheck[parent];
+						HeapCheck[parent] = insertdata;
+						
+					}
+				}
+				
+			}
+			return HeapCheck;
+		}
+	}
+
+}

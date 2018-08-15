@@ -1,0 +1,13 @@
+
+public class LinkListImpl {
+	NodeLink Start;
+	
+	public LinkListImpl(){
+		this.Start = null;
+	}
+	
+	public insert(int data){
+		
+	}
+	
+}

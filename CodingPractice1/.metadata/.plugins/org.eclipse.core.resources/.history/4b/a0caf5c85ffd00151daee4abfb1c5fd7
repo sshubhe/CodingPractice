@@ -1,0 +1,71 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+
+
+public class HeapSort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ArrayList<Integer> HeapDataStruct = new ArrayList<Integer>();
+		insert(HeapDataStruct,5);
+		insert(HeapDataStruct,15);
+		insert(HeapDataStruct,52);
+		insert(HeapDataStruct,3);
+		insert(HeapDataStruct,12);
+		//maxHeapify(HeapDataStruct,HeapDataStruct.size());
+		Iterator itr =  HeapDataStruct.iterator();
+	
+		while(itr.hasNext()){
+			System.out.println(itr.next());
+		}
+		maxHeapify(HeapDataStruct,HeapDataStruct.size());
+		
+	
+	}
+	public static void insert(ArrayList<Integer> HeapData,int val){
+		if(HeapData.size() == 0){
+			HeapData.add(val);
+		}
+		else{
+			HeapData.add(val);
+			int heapsize = HeapData.size();
+			int parent = (int) (heapsize)/2;
+			if(HeapData.get(parent) < val){
+				int temp = HeapData.get(parent);
+				HeapData.set(parent, val);
+				HeapData.set((heapsize-1), temp);
+			}
+		}
+		
+	}
+	public static void maxHeapify(ArrayList<Integer> Heapdata, int size){
+		if(size != 0){
+		int newHeapSize = size;
+		int parentpos = (int) (size)/2;
+		System.out.println(parentpos + " " + Heapdata.get(parentpos));
+		int leftchild = 2*parentpos+1;
+		int rightchild = 2*parentpos+2;
+		if(leftchild <= newHeapSize){
+		if(Heapdata.get(parentpos) <= Heapdata.get(leftchild) ){
+			int temp =  Heapdata.get(leftchild);
+			Heapdata.set(leftchild,Heapdata.get(parentpos));
+			Heapdata.set(parentpos, temp);
+			maxHeapify(Heapdata,newHeapSize);
+		}}
+		else if(rightchild <= newHeapSize)
+			if (Heapdata.get(parentpos) < Heapdata.get(rightchild)){
+			int temp =  Heapdata.get(rightchild);
+			Heapdata.set(rightchild,Heapdata.get(parentpos));
+			Heapdata.set(parentpos, temp);
+		}
+		else{
+			maxHeapify(Heapdata,parentpos);
+		}
+		}
+	}
+	
+
+}
+

@@ -1,0 +1,31 @@
+
+public class Insertion {
+
+	public static void main(String[] args) {
+		//insertion sort impl
+
+		int[] input = {12,23,41,1,21,44,9};
+		for(int i = 0; i < input.length;i++){
+		 for(int j=i+1;j<input.length;j++)
+		  {
+			 if(input[i] > input[j]){
+				 swap(input[i],input[j]);
+			}	
+		  }			
+		}
+		for(int l = 0;l<input.length;l++){
+			System.out.println("Disp : " + input[l]);
+		}
+		
+		
+	}
+	
+	
+	public static void swap(int a, int b){
+		int temp = b;
+		b = a;
+		a = temp;
+	}
+	
+
+}

@@ -1,0 +1,13 @@
+package LinkList;
+
+public class CircularLinkListImpl {
+
+	NodeCircularLink Start;
+	
+	public CircularLinkListImpl(){
+		this.Start = null;
+		this.Start.prev = null;
+	}
+	
+	if(Start == null)
+}

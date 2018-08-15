@@ -1,0 +1,21 @@
+
+public class Palndrome {
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String Check1 = "madam";
+		for(int i = 0; i < Check1.length();i++){
+			//if(Check1.charAt(i) == Check1.charAt(Check1.length() -i)){
+				System.out.println("Checking CharAt : " + Check1.charAt(i)  ); 
+			//}
+			//else{
+			//	System.out.println("Not Palendrom ");
+			//}
+		}
+		
+		
+	}
+
+}

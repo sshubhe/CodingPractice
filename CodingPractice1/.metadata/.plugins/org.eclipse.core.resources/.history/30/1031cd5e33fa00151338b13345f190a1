@@ -1,0 +1,43 @@
+
+public class BinarySearchTree {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		int[] Input = {32,45,3223,232,111,9};
+		node root = new node(7);
+		node left = new node(34);
+		node right = new node(43);
+		root.leftchild = left;
+		root.rightchild = right;
+		for(int i = 0; i < Input.length;i++){
+			node n = new node(i);
+			n.leftchild = new node(i+1);
+			n.rightchild = new node(i+2);
+		}
+	
+		
+		display(root);
+		
+	}
+	
+ public static void display(node n1){
+	 
+	 System.out.println("data : " + n1.data);
+	
+	 	if(n1.leftchild != null){
+		 display(n1.leftchild);
+	 	}
+	 	if(n1.rightchild != null){
+		 display(n1.rightchild);
+	 	}
+	 
+	 
+	 
+	 
+ }	
+	
+	
+
+}

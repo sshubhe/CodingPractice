@@ -1,0 +1,35 @@
+
+public class BinaryTree {
+
+	node root;
+	
+	public BinaryTree(){
+		this.root = null;
+	}
+	
+	public void insert(int nodeval){
+		
+		if(root == null){
+			root.val = nodeval;
+		}
+		else{
+			insert(root,nodeval);			
+		}
+	}
+	
+	public void insert(node n , int value){
+		
+		if(n.left == null){
+			n.left = new node(value);
+		}
+		else if(n.right == null){
+			n.right = new node(value);
+		}
+		else{
+			insert(n.left,value);
+		}
+	}
+	
+	
+	
+	}

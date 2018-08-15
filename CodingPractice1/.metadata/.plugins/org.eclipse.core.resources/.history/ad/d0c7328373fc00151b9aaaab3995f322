@@ -1,0 +1,23 @@
+
+public class ImplementationTree {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		BinaryTree BT = new BinaryTree();
+		BT.insert(5);
+		BT.insert(8);
+		BT.insert(19);
+		BT.insert(2);
+		BT.insert(4);
+		BT.insert(2);
+		BT.insert(22);
+		BT.insert(8);
+		BT.insert(19);
+		BT.insert(2);
+		BT.insert(4);
+		BT.insert(2);
+		BT.insert(22);
+	}
+
+}

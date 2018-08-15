@@ -1,0 +1,39 @@
+
+public class LinkListImpl {
+	NodeLink Start;
+	
+	public LinkListImpl(){
+		this.Start = null;
+	}
+	
+	public void insert(int data){
+		NodeLink node = new NodeLink(data);
+		if(Start == null){
+			Start = node;
+			Start.next = null;
+		}
+		else{
+			insert(Start,data);
+		}
+	}
+	public void insert(NodeLink n, int data){
+		if(n.next == null){
+			NodeLink nextnode = new NodeLink(data);
+			n.next = nextnode;
+		}
+		else{
+			insert(n.next,data);
+		}
+	}
+	public void display(){
+			display(Start);
+		}
+	public void display(NodeLink n){
+		while(n != null){
+			System.out.println("LinkList : " + n.data);
+			n = n.next;
+		}
+	}
+	
+	
+}

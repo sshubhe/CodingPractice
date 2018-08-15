@@ -1,0 +1,41 @@
+package LinkList;
+
+public class CircularLinkListImpl {
+
+	NodeCircularLink Start;
+	boolean CircularListStarted = false;
+	public CircularLinkListImpl(){
+		this.Start = null;
+	}
+	
+	public void insert(int val){
+		
+		if(Start == null){
+			Start = new NodeCircularLink(val);
+			CircularListStarted = true;
+		}
+		else{
+			insert(Start,val);
+		}
+	}
+	public void insert(NodeCircularLink n , int data){
+		boolean startingnode = false;
+		NodeCircularLink StartNode;
+		if(!startingnode){
+			NodeCircularLink StartNode = n;
+			startingnode = true;
+		}
+		if(n.next != null){
+			n = n.next;
+		}
+		else{
+			NodeCircularLink nextnode = new NodeCircularLink(data);
+			n.next = nextnode;
+			n.next.prev = n;
+			n.next.next = StartNode;
+		}
+	}
+	
+	
+	
+}

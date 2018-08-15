@@ -1,0 +1,28 @@
+package HeapProblems;
+
+public class MaxHeap {
+
+	public static void main(String[] args) {
+		//In max heap the higher elements in hierarchy have higher values
+		
+		int [] input = new int[10];
+		
+		
+		
+
+		
+	}
+
+}
+
+class node{
+	int data;
+	node left;
+	node right;
+	
+	public node(node left, node right, int data){
+		this.right = right;
+		this.left = left;
+		this.data = data;
+	}
+}

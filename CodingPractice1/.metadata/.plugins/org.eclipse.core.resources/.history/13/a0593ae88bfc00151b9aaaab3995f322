@@ -1,0 +1,15 @@
+
+public class NodeLink {
+
+	int data;
+	NodeLink link;
+	
+	public NodeLink(){
+	
+	}
+	public NodeLink(int data){
+		this.data = data;
+		this.link = null;
+	}
+	
+}

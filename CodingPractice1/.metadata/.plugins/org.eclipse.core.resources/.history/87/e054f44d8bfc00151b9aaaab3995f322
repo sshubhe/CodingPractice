@@ -1,0 +1,15 @@
+
+public class LinkListImpl {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[] input = { 1,
+				32,
+				43,
+				12312,
+				21
+				};
+	}
+
+}
